@@ -30,17 +30,19 @@ public class Event {
     private int numberAttending;
 
     public Event(String name, String description, String contactEmail, String location, boolean registered, int numberAttending) {
+        this();
         this.name = name;
         this.description = description;
         this.contactEmail = contactEmail;
         this.location = location;
         this.registered = registered;
         this.numberAttending = numberAttending;
+    }
+
+    public Event() {
         this.id = nextId;
         ++nextId;
     }
-
-    public Event() {}
 
     public String getName() {
         return name;
